@@ -45,3 +45,34 @@ const isDivisible = (number) => number % 2 === 0
 
 let areDivisibleByTwo = numbers.filter(isDivisible)
 console.log(areDivisibleByTwo)
+
+// solution to assignment
+
+const str = 'My mother is a good woman yes she is';
+const arrayOfWords = str.split(' ')
+
+console.log(arrayOfWords)
+
+let characters = []
+
+arrayOfWords.forEach((word) => {
+  const wordSplitted = word.split('')
+  characters.push(...wordSplitted)
+})
+
+// console.log(characters)
+
+
+
+const makeArrayOfCharacter = () => {
+  let mapCharacters = arrayOfWords.map((word) => {
+    const wordSplitted = word.split('')
+    return wordSplitted
+  })
+
+  return mapCharacters.flat()
+}
+
+console.log(makeArrayOfCharacter())
+
+
